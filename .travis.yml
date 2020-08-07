@@ -23,7 +23,7 @@ script:
 - black .
 - pre-commit run --all-files
 - coverage run -m unittest discover
-#- python -m pytest --cov-report term --cov=app
+- python -m pytest --cov-report term --cov=app
 
 notifications:
  on_success: change
