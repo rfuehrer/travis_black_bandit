@@ -27,5 +27,5 @@ notifications:
  on_failure: change  # `always` will be the setting once code changes slow down
 
 # command to run tests
-#script: 
+#script:
 #sudo: required
