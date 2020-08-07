@@ -1,4 +1,6 @@
 def something(i):
+    myvar = ""
+    print(myvar)
 
     return i
 
