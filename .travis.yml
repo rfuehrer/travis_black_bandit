@@ -29,3 +29,6 @@ notifications:
 # command to run tests
 #script:
 #sudo: required
+
+after_success:
+  - codecov
