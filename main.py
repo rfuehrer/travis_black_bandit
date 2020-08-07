@@ -1,6 +1,6 @@
 
 def something(i):
-
+    password = "" 
     return i
 
 if __name__ == "__main__":
