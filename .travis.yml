@@ -2,7 +2,6 @@ language: python
 cache: pip
 
 python:
-#- 2.7
 - 3.7
 
 install :
@@ -36,4 +35,4 @@ notifications:
 
 after_success:
 #- codecov
-- bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash) || echo 'Codecov failed to upload'
