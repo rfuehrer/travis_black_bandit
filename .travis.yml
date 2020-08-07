@@ -10,6 +10,7 @@ install :
 - pip install flake8
 - pip install black
 - pip install codecov
+- pip install coverage
 
 before_script:
  # stop the build if there are Python syntax errors or undefined names
@@ -22,7 +23,8 @@ script:
 - flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
 - black .
 - pre-commit run --all-files
-- python -m pytest --cov-report term --cov=app
+- coverage run -m unittest discover
+#- python -m pytest --cov-report term --cov=app
 
 notifications:
  on_success: change
@@ -33,4 +35,5 @@ notifications:
 #sudo: required
 
 after_success:
-  - codecov
+#- codecov
+- bash <(curl -s https://codecov.io/bash)
